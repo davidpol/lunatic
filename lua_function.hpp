@@ -107,7 +107,7 @@ namespace lunatic
         {
         public:
             lua_function_base(lua_State* L, const std::string& name) :
-            state(L), name(name) {}
+                state(L), name(name) {}
 
             lua_function_base(const lua_function_base&) = delete;
             lua_function_base& operator=(const lua_function_base&) = delete;
@@ -133,7 +133,7 @@ namespace lunatic
     {
     public:
         lua_function(lua_State* L, const std::string& name) :
-        lua_function_base(L, name) {}
+            lua_function_base(L, name) {}
 
         Ret operator()()
         {
@@ -176,7 +176,7 @@ namespace lunatic
     {
     public:
         lua_function(lua_State* L, const std::string& name) :
-        lua_function_base(L, name) {}
+            lua_function_base(L, name) {}
 
         std::tuple<Ret1, RetN...> operator()()
         {
@@ -220,7 +220,7 @@ namespace lunatic
     {
     public:
         lua_function(lua_State* L, const std::string& name) :
-        lua_function_base(L, name) {}
+            lua_function_base(L, name) {}
 
         void operator()()
         {
